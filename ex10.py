@@ -1,14 +1,17 @@
 #!/usr/bin/python
+
+import math
+
 def isPrime(number):
-  for i in range(2,number/2):
+  temp = int(math.sqrt(number))
+  for i in range(2, temp):
     if(number%i==0):
       return False
   return True
 
 sumValue=5
-for j in range(4,2000000): 
+for j in range(5,2000000): 
   if(isPrime(j)):
-    print j 
     sumValue=j+sumValue
 print "The sum is :"
 print sumValue 
